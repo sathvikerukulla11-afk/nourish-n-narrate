@@ -753,6 +753,21 @@
     .social-btn { width: 48px; height: 48px; border-radius: 14px; background: var(--bg); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; transition: transform var(--dur), box-shadow var(--dur), background var(--dur); }
     .social-btn:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); background: var(--green-pale); }
 
+    /* Contact email link */
+    .contact-email-link {
+      display: inline-flex; align-items: center; gap: .75rem;
+      font-size: 1.15rem; font-weight: 600; color: var(--green);
+      background: var(--green-pale); border: 2px solid var(--green-light);
+      padding: 1rem 2rem; border-radius: 99px;
+      transition: background var(--dur), transform var(--dur), box-shadow var(--dur);
+      box-shadow: var(--shadow-sm);
+    }
+    .contact-email-link:hover {
+      background: var(--green); color: var(--white);
+      transform: translateY(-2px); box-shadow: var(--shadow-md);
+    }
+    .contact-email-icon { font-size: 1.3rem; }
+
 
     /* ============================================================
       16. FOOTER
@@ -1250,42 +1265,15 @@
         <span class="section-label">Contact</span>
         <h2 class="section-title">Say Hello 👋</h2>
         <div class="divider"></div>
-        <p class="section-sub">Have a question, collaboration idea, or just want to say hi?</p>
+        <p class="section-sub">Have a question or just want to say hi? Drop us an email!</p>
       </div>
 
-      <!-- ✏️ Contact cards — edit icon, heading, and content for each -->
-      <div class="contact-inner">
-        <div class="contact-card reveal">
-          <div class="contact-icon-wrap" aria-hidden="true">📧</div>
-          <h4>Email Us</h4>
-          <!-- ✏️ Replace with your actual email address -->
-          <p><a href="mailto:hello@nourishnarrate.com">hello@nourishnarrate.com</a></p>
-        </div>
-        <div class="contact-card reveal">
-          <div class="contact-icon-wrap" aria-hidden="true">📍</div>
-          <h4>Based In</h4>
-          <!-- ✏️ Replace with your location -->
-          <p>India 🇮🇳<br />Available worldwide</p>
-        </div>
-        <div class="contact-card reveal">
-          <div class="contact-icon-wrap" aria-hidden="true">⏰</div>
-          <h4>Response Time</h4>
-          <p>We typically reply within 24–48 hours.</p>
-        </div>
-        <div class="contact-card reveal">
-          <div class="contact-icon-wrap" aria-hidden="true">🤝</div>
-          <h4>Collaborations</h4>
-          <p>Open to partnerships and recipe features.</p>
-        </div>
-      </div>
-
-      <!-- ✏️ Social media links — replace "#" with your actual profile URLs -->
-      <div class="social-row reveal" aria-label="Social media links">
-        <a href="#" class="social-btn" aria-label="Instagram" title="Instagram">📷</a>
-        <a href="#" class="social-btn" aria-label="YouTube"   title="YouTube">▶️</a>
-        <a href="#" class="social-btn" aria-label="Pinterest" title="Pinterest">📌</a>
-        <a href="#" class="social-btn" aria-label="Twitter"   title="Twitter / X">🐦</a>
-        <a href="#" class="social-btn" aria-label="TikTok"    title="TikTok">🎵</a>
+      <!-- ✏️ Edit the email address below -->
+      <div class="text-center reveal" style="margin-top:2.5rem">
+        <a href="mailto:nourishnnarrate6@gmail.com" class="contact-email-link">
+          <span class="contact-email-icon" aria-hidden="true">📧</span>
+          nourishnnarrate6@gmail.com
+        </a>
       </div>
     </div>
   </section>
