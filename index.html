@@ -768,6 +768,14 @@
     }
     .contact-email-icon { font-size: 1.3rem; }
 
+    /* Team grid */
+    .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+    .team-card { background: var(--bg); border: 1px solid var(--border); border-radius: 20px; padding: 2rem 1.5rem; text-align: center; transition: transform var(--dur), box-shadow var(--dur); }
+    .team-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+    .team-avatar { width: 64px; height: 64px; border-radius: 50%; background: var(--green-pale); border: 2px solid var(--green-light); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin: 0 auto 1rem; }
+    .team-card h4 { font-size: .95rem; font-weight: 700; color: var(--text); margin-bottom: .35rem; line-height: 1.3; }
+    .team-role { font-size: .78rem; font-weight: 600; color: var(--green); background: var(--green-pale); padding: .2rem .75rem; border-radius: 99px; display: inline-block; }
+
 
     /* ============================================================
       16. FOOTER
@@ -1265,11 +1273,36 @@
         <span class="section-label">Contact</span>
         <h2 class="section-title">Say Hello 👋</h2>
         <div class="divider"></div>
-        <p class="section-sub">Have a question or just want to say hi? Drop us an email!</p>
+        <p class="section-sub">We are a team of student founders passionate about making healthy eating delicious, accessible, and fun. Nourish N Narrate was born from our shared belief that nutritious food should never be boring — so we take the recipes you already love and give them a wholesome twist.</p>
       </div>
 
-      <!-- ✏️ Edit the email address below -->
-      <div class="text-center reveal" style="margin-top:2.5rem">
+      <!-- Team -->
+      <div class="team-grid reveal">
+        <div class="team-card">
+          <div class="team-avatar" aria-hidden="true">👤</div>
+          <h4>Sai Sathvik Erukulla</h4>
+          <span class="team-role">Co-Founder</span>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar" aria-hidden="true">👤</div>
+          <h4>Manvik Tej Kandem</h4>
+          <span class="team-role">Co-Founder</span>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar" aria-hidden="true">👤</div>
+          <h4>Aatish Chittineni</h4>
+          <span class="team-role">Co-Founder</span>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar" aria-hidden="true">👤</div>
+          <h4>Thanush Cherukuri</h4>
+          <span class="team-role">Co-Founder</span>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="text-center reveal" style="margin-top:3rem">
+        <p style="color:var(--text-muted);margin-bottom:1rem;font-size:.95rem;">Have a question or just want to say hi?</p>
         <a href="mailto:nourishnnarrate6@gmail.com" class="contact-email-link">
           <span class="contact-email-icon" aria-hidden="true">📧</span>
           nourishnnarrate6@gmail.com
@@ -1557,6 +1590,197 @@
           ["Few or no vegetables", "Carrots, peas, and spinach added"],
           ["Higher saturated fat from dark meat", "Lean chicken breast — lower in saturated fat"],
           ["~600+ calories per serving", "~430 calories per serving"],
+        ],
+      },
+
+      {
+        title:    "Banana Oat Pancakes",
+        category: "breakfast",
+        emoji:    null,
+        image:    null,
+        desc:     "Fluffy, naturally sweet pancakes made with bananas and oats instead of refined flour and sugar. They're high in fiber, packed with nutrients, and perfect for a healthy breakfast.",
+        time:     "20 min",
+        servings: "4",
+        calories: "235",
+        ingredients: [
+          "2 ripe bananas",
+          "2 eggs",
+          "1 cup rolled oats",
+          "1 tsp baking powder",
+          "1 tsp vanilla extract",
+          "½ tsp cinnamon",
+          "Splash of milk (optional, if needed)",
+          "Fresh berries for topping",
+          "Greek yogurt for serving",
+        ],
+        steps: [
+          "Blend the bananas, eggs, oats, baking powder, vanilla, and cinnamon together until you have a smooth batter. Add a splash of milk if the batter looks too thick.",
+          "Heat a non-stick pan over medium heat and lightly grease with cooking spray or a tiny bit of butter.",
+          "Pour small circles of batter onto the pan, about 3–4 inches wide.",
+          "Cook for 2–3 minutes until bubbles form on the surface and the edges look set.",
+          "Flip and cook for another 2–3 minutes until golden brown on both sides.",
+          "Top with fresh berries and a dollop of Greek yogurt before serving.",
+        ],
+        tip: "The riper the bananas, the sweeter and more flavourful your pancakes will be. Spotted, very ripe bananas are ideal. You can also add a handful of blueberries directly into the batter before cooking.",
+        whyHealthier: [
+          "Whole rolled oats replace refined white flour, providing more fibre and a lower glycaemic index for steady energy throughout the morning.",
+          "Ripe bananas naturally sweeten the pancakes with zero added sugar, while also contributing potassium and vitamin B6.",
+          "Eggs and Greek yogurt boost the protein content significantly, helping keep you full well past breakfast.",
+          "Each serving packs 5g of fibre, which supports healthy digestion and reduces hunger cravings.",
+          "With no refined sugar or butter in the batter, these pancakes clock in at just 235 calories per serving with a strong nutrient profile.",
+        ],
+        comparison: [
+          ["White all-purpose flour", "Whole rolled oats — more fibre and nutrients"],
+          ["Refined white sugar", "Natural sweetness from ripe bananas only"],
+          ["Maple syrup or pancake syrup", "Fresh berries — antioxidants with no added sugar"],
+          ["Butter in the batter", "No added fat in the batter"],
+          ["Low protein (~5g per serving)", "Higher protein (~11g) from eggs and Greek yogurt"],
+          ["~320 calories per serving", "~235 calories per serving"],
+        ],
+      },
+
+      {
+        title:    "Healthy Strawberry Frozen Yogurt",
+        category: "dessert",
+        emoji:    null,
+        image:    null,
+        desc:     "A creamy, refreshing frozen treat made with Greek yogurt and real strawberries. It's naturally sweet, high in protein, and a healthier alternative to traditional ice cream.",
+        time:     "10 min + 3–4 hrs freeze",
+        servings: "4",
+        calories: "180",
+        ingredients: [
+          "2 cups plain Greek yogurt",
+          "2 cups frozen strawberries",
+          "2 tbsp honey or maple syrup",
+          "1 tsp vanilla extract",
+          "1 tbsp lemon juice (optional)",
+        ],
+        steps: [
+          "Add the frozen strawberries, Greek yogurt, honey, vanilla, and lemon juice to a blender or food processor.",
+          "Blend until smooth and creamy, scraping down the sides as needed.",
+          "Taste and adjust sweetness by adding a little more honey or maple syrup if desired.",
+          "Transfer the mixture to a freezer-safe container and spread it evenly.",
+          "Freeze for 3–4 hours, stirring once halfway through to break up ice crystals and achieve a smoother texture.",
+          "Remove from the freezer and let sit at room temperature for 5–10 minutes before scooping and serving.",
+        ],
+        tip: "For an extra smooth texture, blend the mixture a second time after the halfway stir before returning it to the freezer. You can also fold in sliced fresh strawberries or dark chocolate chips before the final freeze for added texture.",
+        whyHealthier: [
+          "Greek yogurt replaces heavy cream, providing significantly more protein and calcium with far less saturated fat per serving.",
+          "Real frozen strawberries add natural sweetness, fibre, and vitamin C, reducing the amount of added sweetener needed.",
+          "Just 2 tablespoons of honey or maple syrup sweetens the entire batch — a fraction of the refined sugar found in store-bought ice cream.",
+          "At only 180 calories per serving, this dessert satisfies a sweet craving while delivering 12g of protein.",
+          "No artificial flavours, stabilisers, or preservatives — just four wholesome ingredients.",
+        ],
+        comparison: [
+          ["Heavy cream base", "Plain Greek yogurt — lower fat, higher protein"],
+          ["Refined white sugar", "Honey or maple syrup — natural sweetener"],
+          ["Artificial flavouring", "Real frozen strawberries"],
+          ["~280 calories per serving", "~180 calories per serving"],
+          ["~3g protein per serving", "~12g protein per serving"],
+          ["High saturated fat", "Lower saturated fat from yogurt"],
+        ],
+      },
+
+      {
+        title:    "Healthy Veggie Noodles",
+        category: "lunch",
+        emoji:    null,
+        image:    null,
+        desc:     "A colorful noodle dish packed with fresh vegetables and a light garlic-ginger sauce. Lower in oil, higher in fiber, and much more nutritious than traditional takeout noodles.",
+        time:     "30 min",
+        servings: "4",
+        calories: "320",
+        ingredients: [
+          "8 oz whole wheat noodles",
+          "1 cup carrots, julienned",
+          "1 cup bell peppers, sliced",
+          "1 cup broccoli florets",
+          "½ cup snap peas",
+          "2 cloves garlic, minced",
+          "1 tsp grated ginger",
+          "1 tbsp low-sodium soy sauce",
+          "1 tbsp sesame oil",
+          "1 tbsp olive oil",
+          "1 tsp honey",
+          "Green onions for garnish",
+        ],
+        steps: [
+          "Cook the whole wheat noodles according to package directions, then drain and set aside.",
+          "Heat olive oil in a large pan over medium heat.",
+          "Add garlic and ginger and cook for 30 seconds, stirring constantly, until fragrant.",
+          "Add the carrots, broccoli, bell peppers, and snap peas. Stir-fry for 4–5 minutes until tender-crisp.",
+          "Whisk together the soy sauce, sesame oil, and honey in a small bowl.",
+          "Add the cooked noodles and sauce to the pan and toss until everything is evenly coated.",
+          "Cook for 1–2 more minutes, tossing continuously.",
+          "Garnish with sliced green onions and serve immediately.",
+        ],
+        tip: "Add tofu or edamame for an extra plant-based protein boost. For a spicy kick, drizzle with a little sriracha or chili oil before serving.",
+        whyHealthier: [
+          "Whole wheat noodles contain significantly more fibre and nutrients than refined white noodles, supporting digestion and steady energy levels.",
+          "Loading up on carrots, broccoli, bell peppers, and snap peas increases vitamins A, C, and K as well as antioxidants in every serving.",
+          "Using just 1 tbsp of olive oil instead of the generous amounts typical in takeout reduces unnecessary calories without sacrificing flavour.",
+          "Low-sodium soy sauce cuts the sodium content considerably compared to regular soy sauce or takeout seasoning packets.",
+          "Sesame oil and honey add depth and natural sweetness with minimal quantities, replacing heavy, calorie-dense sauces.",
+        ],
+        comparison: [
+          ["Refined white noodles", "Whole wheat noodles — more fibre and nutrients"],
+          ["High oil content", "Just 1 tbsp olive oil + 1 tbsp sesame oil"],
+          ["Few or no vegetables", "Four types of fresh vegetables"],
+          ["High-sodium sauce", "Low-sodium soy sauce"],
+          ["Heavy calorie-dense sauce", "Light garlic-ginger sauce with honey"],
+          ["~450+ calories per serving", "~320 calories per serving"],
+        ],
+      },
+
+      {
+        title:    "Healthy Garlic Chicken Noodles",
+        category: "dinner",
+        emoji:    null,
+        image:    null,
+        desc:     "Lean chicken breast, whole wheat noodles, and fresh vegetables tossed in a light garlic-ginger sauce for a high-protein, healthier take on restaurant-style noodles.",
+        time:     "35 min",
+        servings: "4",
+        calories: "390",
+        ingredients: [
+          "8 oz whole wheat noodles",
+          "1 lb skinless chicken breast, sliced thin",
+          "1 cup broccoli florets",
+          "1 cup carrots, julienned",
+          "½ cup bell peppers, sliced",
+          "2 cloves garlic, minced",
+          "1 tsp grated ginger",
+          "2 tbsp low-sodium soy sauce",
+          "1 tbsp sesame oil",
+          "1 tbsp olive oil",
+          "1 tsp honey",
+          "Green onions and sesame seeds for garnish",
+        ],
+        steps: [
+          "Cook the whole wheat noodles according to package directions, drain, and set aside.",
+          "Heat olive oil in a large pan over medium-high heat.",
+          "Add the sliced chicken breast and cook for 6–8 minutes, turning occasionally, until no longer pink and cooked through.",
+          "Push the chicken to one side, add garlic and ginger, and cook for 30 seconds until fragrant.",
+          "Add the broccoli, carrots, and bell peppers and stir-fry for 4–5 minutes until tender-crisp.",
+          "Whisk together the soy sauce, sesame oil, and honey in a small bowl.",
+          "Add the cooked noodles and sauce to the pan and toss everything together well.",
+          "Cook for 1–2 more minutes until heated through.",
+          "Garnish with sliced green onions and sesame seeds before serving.",
+        ],
+        tip: "Squeeze fresh lime juice over the noodles just before serving for a bright citrus lift without adding many calories. Marinating the chicken in a little soy sauce and ginger for 15 minutes before cooking adds extra depth of flavour.",
+        whyHealthier: [
+          "Lean chicken breast provides 34g of high-quality protein per serving, making this a genuinely filling and muscle-supporting meal.",
+          "Whole wheat noodles replace refined white noodles, delivering more fibre and a lower glycaemic index for sustained energy.",
+          "Broccoli, carrots, and bell peppers contribute vitamins A, C, and K, along with antioxidants and additional fibre.",
+          "Just 1 tbsp of olive oil keeps the dish light, replacing the heavy oil quantities used in traditional takeout versions.",
+          "Low-sodium soy sauce significantly reduces the sodium content without losing the savoury depth you expect.",
+        ],
+        comparison: [
+          ["White refined noodles", "Whole wheat noodles — more fibre and nutrients"],
+          ["Fried or breaded chicken", "Lean skinless chicken breast — low in saturated fat"],
+          ["Heavy oil for cooking", "Just 1 tbsp olive oil"],
+          ["High-sodium sauce", "Low-sodium soy sauce"],
+          ["Few vegetables or none", "Broccoli, carrots, and bell peppers"],
+          ["~500+ calories per serving", "~390 calories per serving"],
         ],
       },
 
@@ -1938,4 +2162,3 @@
   </script>
 </body>
 </html>
-
